@@ -71,4 +71,28 @@ public class Cell {
     public List<Cell> getNeighbourCells() {
         return neighbourCells;
     }
+
+    public void checkAliveNextRound(){
+        int aliveNeighbourCounter = 0;
+        for (Cell neighbourCell: neighbourCells
+             ) {
+            if (neighbourCell.isAlive){
+                aliveNeighbourCounter ++;
+            }
+        }
+
+        if (isAlive){
+            if (!(aliveNeighbourCounter == 2 || aliveNeighbourCounter == 3)){
+                setAliveNextRound(false);
+            }
+        } else {
+            if (aliveNeighbourCounter == 3){
+                setAliveNextRound(true);
+            }
+        }
+    }
+
+    public void updateAlive(){
+        isAlive = isAliveNextRound;
+    }
 }

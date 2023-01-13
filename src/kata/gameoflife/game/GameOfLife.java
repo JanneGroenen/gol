@@ -59,6 +59,21 @@ public class GameOfLife {
     public void startGameOfLife(){
         InputConverter inputConverter = new InputConverter();
         windowScreen.draw(inputConverter.convertToScreenInput(listOfCells));
+
+        for(List<Cell> cellList1:listOfCells){
+            for(Cell cell:cellList1){
+                cell.checkAliveNextRound();
+            }
+        }
+
+        for(List<Cell> cellList1:listOfCells){
+            for(Cell cell:cellList1){
+                cell.updateAlive();
+            }
+        }
+
+        windowScreen.draw(inputConverter.convertToScreenInput(listOfCells));
+        System.out.println("Hello");
     }
 
 }
