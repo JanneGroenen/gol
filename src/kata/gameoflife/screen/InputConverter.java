@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InputConverter {
-    private List<List<Integer>> screenInput = new ArrayList<>();
+    
 
     public List<List<Integer>> convertToScreenInput(List<List<Cell>> cellList){
+        List<List<Integer>> screenInput = new ArrayList<>();
+
             for (int row = 0; row < 10; row++) {
                 List<Integer> rowOfCells = new ArrayList<>();
                 for (int column = 0; column < 10; column++) {

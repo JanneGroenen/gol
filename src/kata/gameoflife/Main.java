@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         GameOfLife gol = new GameOfLife();
 
         gol.createAllCells();
@@ -17,10 +17,10 @@ public class Main {
 
         List<List<Integer>> startingState= List.of(
                 List.of(0,0,0,0,0,0,0,0,0,0),
-                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,0,1,0,0,0,0,0,0,0),
                 List.of(0,1,1,1,0,0,1,1,1,0),
                 List.of(0,0,0,0,0,0,0,0,0,0),
-                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,0,0,0,0,1,0,0,0,0),
                 List.of(0,0,1,0,0,0,0,1,0,0),
                 List.of(0,0,1,0,0,0,0,1,0,0),
                 List.of(0,0,1,0,0,0,0,1,0,0),

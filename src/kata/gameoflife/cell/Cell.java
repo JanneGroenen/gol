@@ -84,10 +84,14 @@ public class Cell {
         if (isAlive){
             if (!(aliveNeighbourCounter == 2 || aliveNeighbourCounter == 3)){
                 setAliveNextRound(false);
+            } else {
+                setAliveNextRound(true);
             }
         } else {
             if (aliveNeighbourCounter == 3){
                 setAliveNextRound(true);
+            } else {
+                setAliveNextRound(false);
             }
         }
     }

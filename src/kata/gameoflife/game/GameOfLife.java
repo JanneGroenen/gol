@@ -56,24 +56,28 @@ public class GameOfLife {
         }
     }
 
-    public void startGameOfLife(){
+    public void startGameOfLife() throws InterruptedException {
         InputConverter inputConverter = new InputConverter();
-        windowScreen.draw(inputConverter.convertToScreenInput(listOfCells));
 
-        for(List<Cell> cellList1:listOfCells){
-            for(Cell cell:cellList1){
-                cell.checkAliveNextRound();
+        while (true) {
+            windowScreen.draw(inputConverter.convertToScreenInput(listOfCells));
+
+            for (List<Cell> cellList1 : listOfCells) {
+                for (Cell cell : cellList1) {
+                    cell.checkAliveNextRound();
+                }
             }
-        }
 
-        for(List<Cell> cellList1:listOfCells){
-            for(Cell cell:cellList1){
-                cell.updateAlive();
+            for (List<Cell> cellList1 : listOfCells) {
+                for (Cell cell : cellList1) {
+                    cell.updateAlive();
+                }
             }
-        }
 
-        windowScreen.draw(inputConverter.convertToScreenInput(listOfCells));
-        System.out.println("Hello");
+            System.out.println(listOfCells.get(1).get(2).isAlive());
+            System.out.println(listOfCells.get(1).get(2).isAliveNextRound());
+
+            Thread.sleep(500);
+        }
     }
-
 }
