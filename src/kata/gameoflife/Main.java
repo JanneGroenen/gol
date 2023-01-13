@@ -31,13 +31,13 @@ public class Main {
 
         gol.findNeighboursForAllCells();
 
-        for (List<Cell> cell1 : cellList) {
-            for (Cell cell : cell1) {
-                System.out.println(cell.getX() + ", " + cell.getY() + ", " + cell.getNeighbourCells());
-            }
-        }
+//        for (List<Cell> cell1 : cellList) {
+//            for (Cell cell : cell1) {
+//                System.out.println(cell.getX() + ", " + cell.getY() + ", " + cell.getNeighbourCells());
+//            }
+//        }
 
-
+        gol.startGameOfLife();
 
     }
 

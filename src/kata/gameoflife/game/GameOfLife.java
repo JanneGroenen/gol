@@ -1,6 +1,7 @@
 package kata.gameoflife.game;
 
 import kata.gameoflife.cell.Cell;
+import kata.gameoflife.screen.InputConverter;
 import kata.gameoflife.screen.Screen;
 import kata.gameoflife.screen.WindowScreen;
 
@@ -12,8 +13,6 @@ public class GameOfLife {
 
     private static List<List<Cell>> listOfCells = new ArrayList<>();
     private static Screen windowScreen=new WindowScreen("GameOfLife");
-
-
 
     public void createAllCells(){
         for (int row = 0; row < 10; row++) {
@@ -55,6 +54,11 @@ public class GameOfLife {
                 cell.findAllNeighbourCells(listOfCells);
             }
         }
+    }
+
+    public void startGameOfLife(){
+        InputConverter inputConverter = new InputConverter();
+        windowScreen.draw(inputConverter.convertToScreenInput(listOfCells));
     }
 
 }
