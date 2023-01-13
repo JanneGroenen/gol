@@ -5,6 +5,7 @@ import kata.gameoflife.screen.Screen;
 import kata.gameoflife.screen.WindowScreen;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class GameOfLife {
@@ -26,4 +27,10 @@ public class GameOfLife {
     public List<Cell> getListOfCells() {
         return listOfCells;
     }
+
+    public void setAllAliveOrDead(List<List<Integer>> aliveCells){
+
+
+    }
+
 }

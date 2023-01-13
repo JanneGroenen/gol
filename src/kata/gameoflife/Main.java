@@ -4,6 +4,7 @@ import kata.gameoflife.cell.Cell;
 import kata.gameoflife.game.GameOfLife;
 import kata.gameoflife.screen.WindowScreen;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -13,6 +14,20 @@ public class Main {
 
         gol.createAllCells();
      List<Cell> cellList=gol.getListOfCells();
+
+     List<List<Integer>> startingState= List.of(
+             List.of(0,0,0,0,0,0,0,0,0,0),
+             List.of(0,0,0,0,0,0,0,0,0,0),
+             List.of(0,1,1,1,0,0,1,1,1,0),
+             List.of(0,0,0,0,0,0,0,0,0,0),
+             List.of(0,0,0,0,0,0,0,0,0,0),
+             List.of(0,0,1,0,0,0,0,1,0,0),
+             List.of(0,0,1,0,0,0,0,1,0,0),
+             List.of(0,0,1,0,0,0,0,1,0,0),
+             List.of(0,0,0,0,0,0,0,0,0,0),
+             List.of(0,0,0,0,0,0,0,0,0,0));
+
+     gol.setAllAliveOrDead(startingState);
 
     }
 
