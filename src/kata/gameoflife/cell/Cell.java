@@ -36,4 +36,14 @@ public class Cell {
     public void setAliveNextRound(boolean aliveNextRound) {
         isAliveNextRound = aliveNextRound;
     }
+
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "x=" + x +
+                ", y=" + y +
+                ", isAlive=" + isAlive +
+//                ", isAliveNextRound=" + isAliveNextRound +
+                '}';
+    }
 }

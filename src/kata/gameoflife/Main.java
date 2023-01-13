@@ -13,7 +13,7 @@ public class Main {
         GameOfLife gol = new GameOfLife();
 
         gol.createAllCells();
-     List<Cell> cellList=gol.getListOfCells();
+     List<List<Cell>> cellList=gol.getListOfCells();
 
      List<List<Integer>> startingState= List.of(
              List.of(0,0,0,0,0,0,0,0,0,0),
@@ -28,6 +28,10 @@ public class Main {
              List.of(0,0,0,0,0,0,0,0,0,0));
 
      gol.setAllAliveOrDead(startingState);
+
+             for (List<Cell> cell : cellList) {
+         System.out.println(cell);
+     }
 
     }
 
