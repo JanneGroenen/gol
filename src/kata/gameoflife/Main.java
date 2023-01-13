@@ -13,25 +13,29 @@ public class Main {
         GameOfLife gol = new GameOfLife();
 
         gol.createAllCells();
-     List<List<Cell>> cellList=gol.getListOfCells();
+        List<List<Cell>> cellList=gol.getListOfCells();
 
-     List<List<Integer>> startingState= List.of(
-             List.of(0,0,0,0,0,0,0,0,0,0),
-             List.of(0,0,0,0,0,0,0,0,0,0),
-             List.of(0,1,1,1,0,0,1,1,1,0),
-             List.of(0,0,0,0,0,0,0,0,0,0),
-             List.of(0,0,0,0,0,0,0,0,0,0),
-             List.of(0,0,1,0,0,0,0,1,0,0),
-             List.of(0,0,1,0,0,0,0,1,0,0),
-             List.of(0,0,1,0,0,0,0,1,0,0),
-             List.of(0,0,0,0,0,0,0,0,0,0),
-             List.of(0,0,0,0,0,0,0,0,0,0));
+        List<List<Integer>> startingState= List.of(
+                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,1,1,1,0,0,1,1,1,0),
+                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,0,1,0,0,0,0,1,0,0),
+                List.of(0,0,1,0,0,0,0,1,0,0),
+                List.of(0,0,1,0,0,0,0,1,0,0),
+                List.of(0,0,0,0,0,0,0,0,0,0),
+                List.of(0,0,0,0,0,0,0,0,0,0));
 
-     gol.setAllAliveOrDead(startingState);
+        gol.setAllAliveOrDead(startingState);
 
-             for (List<Cell> cell : cellList) {
-         System.out.println(cell);
-     }
+//        for (List<Cell> cell : cellList) {
+//            System.out.println(cell);
+
+
+
+
+        }
 
     }
 
