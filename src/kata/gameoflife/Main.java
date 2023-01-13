@@ -29,13 +29,15 @@ public class Main {
 
         gol.setAllAliveOrDead(startingState);
 
-//        for (List<Cell> cell : cellList) {
-//            System.out.println(cell);
+        gol.findNeighboursForAllCells();
 
-
-
-
+        for (List<Cell> cell1 : cellList) {
+            for (Cell cell : cell1) {
+                System.out.println(cell.getX() + ", " + cell.getY() + ", " + cell.getNeighbourCells());
+            }
         }
+
+
 
     }
 

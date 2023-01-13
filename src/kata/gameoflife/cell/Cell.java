@@ -35,18 +35,19 @@ public class Cell {
 
     public void findAllNeighbourCells (List<List<Cell>> cellList) {
         for (int row = -1; row <= 1; row++) {
-            if (row + x < 0 || row + x >= cellList.size())
+            if (row + y < 0 || row + y >= cellList.size()) {
+                continue; }
             for (int column = -1; column <= 1; column++) {
-                if (row + y < 0 || row + y >= cellList.get(0).size())
+                if (column + x < 0 || column + x >= cellList.get(0).size()) {
+                    continue; }
                 if (row == 0 && column == 0) {
                     continue;
                 }
-//                if (cellList.get(x + row).get(y + column)) {
+                neighbourCells.add(cellList.get(row + y).get(column + x));
 
                 }
             }
         }
-    }
 
     public boolean isAliveNextRound() {
         return isAliveNextRound;
@@ -57,14 +58,17 @@ public class Cell {
     }
 
 
-
     @Override
     public String toString() {
         return "Cell{" +
                 "x=" + x +
                 ", y=" + y +
                 ", isAlive=" + isAlive +
-//                ", isAliveNextRound=" + isAliveNextRound +
+                ", isAliveNextRound=" + isAliveNextRound +
                 '}';
+    }
+
+    public List<Cell> getNeighbourCells() {
+        return neighbourCells;
     }
 }

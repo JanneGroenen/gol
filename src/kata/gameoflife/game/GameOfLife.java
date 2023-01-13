@@ -19,7 +19,7 @@ public class GameOfLife {
         for (int row = 0; row < 10; row++) {
             List<Cell> rowOfCells = new ArrayList<>();
             for (int column = 0; column < 10; column++) {
-                Cell cell = new Cell(row,column);
+                Cell cell = new Cell(column,row);
                 rowOfCells.add(cell);
             }
             listOfCells.add(rowOfCells);
@@ -45,6 +45,14 @@ public class GameOfLife {
                             row + " column: " + column + " value: " +
                             aliveCells.get(row).get(column));
                 }
+            }
+        }
+    }
+
+    public void findNeighboursForAllCells() {
+        for(List<Cell> cellList1:listOfCells){
+            for(Cell cell:cellList1){
+                cell.findAllNeighbourCells(listOfCells);
             }
         }
     }
